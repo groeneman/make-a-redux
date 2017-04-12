@@ -4,7 +4,7 @@ function randomId() {
 
 export default (action, state) => {
   if(action.type === 'STORE_INIT') {
-    return { state: [] }
+    return []
   }
 
   if(action.type === 'ADD_TODO') {
@@ -12,7 +12,7 @@ export default (action, state) => {
   }
 
   if(action.type === 'REMOVE_TODO') {
-    return state.filter(todo => action.payload != todo.id)
+    return state.filter(todo => action.payload !== todo.id)
   }
 
   return state
