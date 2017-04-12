@@ -12,7 +12,7 @@ Todo.propTypes = {
 
 class TodoList extends Component {
   removeTodo(id) {
-    this.props.dispatch(/* probably need something here */)
+    this.props.dispatch({ type: 'REMOVE_TODO', payload: id })
   }
 
   render() {

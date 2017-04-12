@@ -15,7 +15,7 @@ class AddTodo extends Component {
 
   onSubmit(event) {
     event.preventDefault()
-    this.props.dispatch(/* something goes here */)
+    this.props.dispatch({ type: 'ADD_TODO', payload: this.state.name })
   }
 
   render() {
