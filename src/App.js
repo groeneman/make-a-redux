@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import TodoList from './TodoList.js'
-import AddTodo from './AddTodo.js'
+import Connector from './Connector.js'
 
 class App extends Component {
   render() {
@@ -10,8 +9,7 @@ class App extends Component {
         <div className="App-header">
           <h2>Welcome to React</h2>
         </div>
-        <TodoList todos={ [{ id: 1, name: 'Make a redux clone' }] } />
-        <AddTodo />
+        <Connector />
       </div>
     );
   }
