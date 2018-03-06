@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import reducer from './reducer.js'
+import createStore from './createStore.js'
 import Connector from './Connector.js'
 import TodoList from './TodoList.js'
 import AddTodo from './AddTodo.js'
@@ -18,4 +20,5 @@ class App extends Component {
   }
 }
 
-export default Connector(App);
+const store = createStore(reducer);
+export default Connector(App, store);

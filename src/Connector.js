@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
-import createStore from './createStore.js'
-import reducer from './reducer.js'
 
-const Connector = (Component) => {
+const Connector = (Component, store) => {
   return class extends Component {
     constructor(props) {
       super(props);
-      this.store = createStore(reducer)
+      this.store = store
       this.dispatch = this.dispatch.bind(this);
     }
 
